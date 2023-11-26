@@ -4,12 +4,77 @@
 
 int main() {
 
+  char str1[] = "dddd aaaa jjjj sssss";
+  char str2[] = " ";
+  
+  char *res = my_strtok(str1, str2);
+  //  printf("%s\n", res);
+  while(res != NULL) {
+    printf("%s\n", res);
+    res = strtok(NULL, str2);
+  }
+  return 0;
+
+/*
+//STRSTR
+  char *strStr1 = "sdfsdafHellosdfa";
+  char *strStr2 = "ello";
+  char *res = my_strstr(strStr1, strStr2);
+  char *resOrig = strstr(strStr1, strStr2);
+  printf("%s\n%s\n", res, resOrig);
+  return 0;
+*/
+
+/*
+//STRRCHR
+ char *strRchr = "qwartyqasd";
+ printf("%s\n", my_strrchr(strRchr, 'z'));
+ printf("%s\n", strrchr(strRchr, 'z'));
+     return 0;
+*/
+
+/*
+//STRPBRK
+  char *strPbrk1 = "hello";
+  char *strPbrk2 = "qawawlwaw";
+  char *c = my_strpbrk(strPbrk1, strPbrk2);
+  printf("%s\n", c);
+
+  return 0;
+*/
+
+/*
+//STRLEN
+  char *str = "asd";
+  printf("%d\n", my_strlen(str));
+  return 0;
+*/
+  
+/*
+// STRERROR
+  printf("%s\n", strerror(4));
+  return 0;
+*/
+
+/*
+//STRCSPN 
+  char *str1 = "qwerty";
+  char *str2 = "w";
+  int res = my_strcspn(str1, str2);
+  printf("%d\n%s", res, str1 + res);
+
+  return 0;
+*/
+
+/*
+//STRNCPY
   char *strNcpy1 = "Hello ";
   char strNcpy2[100];
   my_strncpy(strNcpy2, strNcpy1, 29); 
   printf("%s\n", strNcpy2);
 
   return 0;
+*/
 
 /*
   //STRNCMP
